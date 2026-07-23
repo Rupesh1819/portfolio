@@ -117,7 +117,7 @@ export default function RootLayout({
         className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased`}
       >
         {/* Skip to Content — Accessibility */}
-        <a href="#main-content" className="skip-to-content">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:p-4 focus:bg-zinc-900 focus:text-white focus:outline-none focus:ring-2 focus:ring-[var(--accent-cyan)] focus:left-4 focus:top-4 rounded-lg font-mono text-sm">
           Skip to main content
         </a>
 

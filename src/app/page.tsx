@@ -19,7 +19,7 @@ export default function Home() {
       <ScrollProgress />
       <Navbar />
 
-      <main className="relative min-h-screen bg-grid-pattern overflow-hidden">
+      <main id="main-content" className="relative min-h-screen bg-grid-pattern overflow-hidden">
         <BackgroundFX />
         
         {/* Animated Aurora Glow Effects */}

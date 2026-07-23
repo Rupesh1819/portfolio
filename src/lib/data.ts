@@ -22,9 +22,9 @@ export const portfolioData = {
 
 export const heroAchievements = [
   { value: '4+', label: 'Years Coding' },
-  { value: '18+', label: 'Projects' },
-  { value: '100%', label: 'Delivery' },
-  { value: '24/7', label: 'AI Agent' }
+  { value: '18+', label: 'Projects Built' },
+  { value: 'LLM & RAG', label: 'Specialization' },
+  { value: '20+', label: 'Technologies' }
 ];
 
 export const currentlyLearning = [
