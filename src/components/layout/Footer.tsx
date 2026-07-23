@@ -23,7 +23,7 @@ export default function Footer() {
               {portfolioData.vision}
             </p>
             <p className="text-white/40 text-xs font-mono uppercase tracking-widest">
-              Based in {portfolioData.location}
+              {portfolioData.location}
             </p>
           </div>
 
@@ -54,14 +54,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[var(--foreground-muted)] text-sm">
+        <div className="pt-8 border-t border-white/5 flex justify-center items-center">
+          <p className="text-[var(--foreground-muted)] text-sm text-center">
             © {currentYear} {portfolioData.name}. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 text-xs text-white/40 font-mono">
-            <span>Architected with Next.js & Framer Motion</span>
-            <span className="w-1 h-1 rounded-full bg-[var(--accent-cyan)] animate-pulse" />
-          </div>
         </div>
       </div>
     </footer>
