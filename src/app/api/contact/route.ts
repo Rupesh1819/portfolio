@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-// Use a placeholder key if RESEND_API_KEY is missing so the build doesn't fail,
-// but the user will need to supply a real key for it to work.
-const resend = new Resend(process.env.RESEND_API_KEY || 're_placeholder');
+// Initialize Resend only if the API key is present
+const resendApiKey = process.env.RESEND_API_KEY;
+const resend = resendApiKey ? new Resend(resendApiKey) : null;
 
 export async function POST(request: Request) {
   try {
@@ -19,9 +19,23 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
     }
 
+    // If no Resend API key is provided, simulate success (useful for demo/portfolio without backend config)
+    if (!resend) {
+      console.log('\n--- NEW MESSAGE (Simulated) ---');
+      console.log(`From: ${name} <${email}>`);
+      console.log(`Subject: ${subject}`);
+      console.log(`Message: ${message}`);
+      console.log('-------------------------------\n');
+      
+      // Simulate network delay for UI feedback
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      
+      return NextResponse.json({ message: 'Email sent successfully (simulated)' }, { status: 200 });
+    }
+
     const { data, error } = await resend.emails.send({
-      from: 'Portfolio Contact Form <onboarding@resend.dev>', // Update this to your verified domain in production
-      to: 'rupesh@example.com', // The user will replace this with their actual email
+      from: 'Portfolio Contact Form <onboarding@resend.dev>', // Requires domain verification in production
+      to: 'rupeshshete18@gmail.com', // Updated to your correct email
       subject: `New Contact: ${subject || 'No Subject'}`,
       replyTo: email,
       html: `
@@ -31,7 +45,7 @@ export async function POST(request: Request) {
         <p><strong>Subject:</strong> ${subject}</p>
         <hr />
         <p><strong>Message:</strong></p>
-        <p>${message.replace(/\\n/g, '<br>')}</p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
       `,
     });
 
