@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# custom scripts & agent logs
+restore.py
+*.pyc
+__pycache__/
+.gemini/
+.agents/
