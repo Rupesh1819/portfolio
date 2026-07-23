@@ -17,6 +17,12 @@ export interface Project {
   image?: string;
   featured: boolean;
   metrics?: ProjectMetric[];
+  architecture?: string;
+  features?: string[];
+  challenges?: string;
+  results?: string;
+  lessonsLearned?: string;
+  demo?: string;
 }
 
 export interface ProjectMetric {

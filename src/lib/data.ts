@@ -5,6 +5,41 @@
 
 import type { Project, Experience, SkillGroup, Achievement } from '@/types';
 
+// ── Personal Information ───────────────────────
+export const portfolioData = {
+  name: 'Rupesh Sanjay Shete',
+  role: 'AI Engineer | Machine Learning Engineer',
+  tagline: 'Building intelligent software powered by Artificial Intelligence, Machine Learning and Large Language Models.',
+  about: `My journey into AI engineering started with a fascination for how data shapes our world. As a final-year Computer Engineering student, I've transitioned from building traditional full-stack applications to architecting autonomous systems and intelligent architectures. I believe that complexity belongs in the backend, leaving the user interface clean, intuitive, and seamless.`,
+  mission: 'To bridge the gap between bleeding-edge artificial intelligence and seamless, human-centric product experiences.',
+  vision: 'Empowering organizations through autonomous systems and intuitive AI interfaces.',
+  currentFocus: 'Currently focused on orchestrating multi-agent systems with LangGraph and deploying massive RAG pipelines.',
+  email: 'rupeshshete18@gmail.com',
+  github: 'https://github.com/Rupesh1819',
+  linkedin: 'https://www.linkedin.com/in/rupesh-shete-b12a83313/',
+  location: 'Pune, India',
+};
+
+export const heroAchievements = [
+  { value: '4+', label: 'Years Coding' },
+  { value: '18+', label: 'Projects' },
+  { value: '100%', label: 'Delivery' },
+  { value: '24/7', label: 'AI Agent' }
+];
+
+export const currentlyLearning = [
+  'Advanced LangGraph Patterns',
+  'Multi-modal LLM orchestration',
+  'Production-grade MLOps',
+  'CUDA Programming'
+];
+
+export const whatImBuildingNow = [
+  'An autonomous RAG pipeline for healthcare data',
+  'A personal AI assistant for task orchestration',
+  'Open-source contributions to LangChain'
+];
+
 // ── Featured Projects ─────────────────────────
 export const projects: Project[] = [
   {
@@ -64,7 +99,7 @@ export const projects: Project[] = [
     ],
     category: 'ai-ml',
     github: 'https://github.com/Rupesh1819/CryptoVision',
-    featured: true,
+    featured: false,
     metrics: [
       { label: 'ML Models', value: '4' },
       { label: 'Data Sources', value: '3' },
@@ -94,7 +129,7 @@ export const projects: Project[] = [
     ],
     category: 'ai-ml',
     github: 'https://github.com/Rupesh1819/phishing-website-detection',
-    featured: true,
+    featured: false,
     metrics: [
       { label: 'Accuracy', value: '96.4%' },
       { label: 'Features', value: '43' },
@@ -116,7 +151,7 @@ export const projects: Project[] = [
     techStack: ['Python', 'Jupyter', 'scikit-learn', 'Pandas', 'NumPy'],
     category: 'ai-ml',
     github: 'https://github.com/Rupesh1819/Movie-Recommendation-System',
-    featured: false,
+    featured: true,
     metrics: [
       { label: 'Type', value: 'Content-Based' },
       { label: 'Algorithm', value: 'ML' },
@@ -161,12 +196,64 @@ export const projects: Project[] = [
     category: 'data-science',
     github:
       'https://github.com/Rupesh1819/TE-DSBDA-72311410C-SHETE-RUPESH-SANJAY',
-    featured: false,
+    featured: true,
   },
 ];
 
 // ── Experience ─────────────────────────────────
 export const experiences: Experience[] = [
+  {
+    id: 'internship-codeb',
+    role: 'Data Science Intern',
+    company: 'CodeB Solution Pvt. Ltd.',
+    location: 'Remote',
+    startDate: '2026',
+    endDate: '2026 (2 Months)',
+    description: 'Built and deployed end-to-end machine learning solutions for real-world business problems. Worked on data preprocessing, feature engineering, model training, explainability, and interactive AI applications.',
+    achievements: [
+      'Developed and evaluated 5+ ML classification models using Python and Scikit-learn.',
+      'Performed exploratory data analysis and feature engineering to improve model quality.',
+      'Built interactive AI applications using Streamlit and Flask.',
+      'Implemented SHAP for explainable AI and feature importance visualization.',
+      'Collaborated using Git and industry-standard development workflows.'
+    ],
+    techStack: ['Python', 'Scikit-learn', 'Pandas', 'Streamlit', 'Flask', 'SHAP', 'Git'],
+    type: 'work',
+  },
+  {
+    id: 'internship-growmore',
+    role: 'Machine Learning Intern',
+    company: 'Growmore Pvt. Ltd.',
+    location: 'Remote',
+    startDate: '2026',
+    endDate: '2026',
+    description: 'Designed and optimized machine learning models for structured datasets while improving model performance through feature engineering and hyperparameter tuning.',
+    achievements: [
+      'Built machine learning models using Python and Scikit-learn.',
+      'Compared multiple algorithms to identify the best-performing solution.',
+      'Performed data preprocessing and feature engineering.',
+      'Optimized models using GridSearchCV for improved prediction accuracy.'
+    ],
+    techStack: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'GridSearchCV'],
+    type: 'work',
+  },
+  {
+    id: 'internship-amdox',
+    role: 'Machine Learning Intern',
+    company: 'Amdox Technologies',
+    location: 'Remote',
+    startDate: '2026',
+    endDate: '2026 (1 Month)',
+    description: 'Contributed to an AI-powered task optimization project by developing predictive models and supporting the end-to-end machine learning workflow.',
+    achievements: [
+      'Developed predictive ML models for task optimization.',
+      'Performed feature engineering and model evaluation.',
+      'Collaborated using Git and version control throughout development.',
+      'Worked within project timelines while meeting defined milestones.'
+    ],
+    techStack: ['Python', 'Machine Learning', 'Git', 'Data Analysis', 'Predictive Modeling'],
+    type: 'work',
+  },
   {
     id: 'education-engineering',
     role: 'B.E. Computer Engineering',
@@ -359,3 +446,31 @@ export const techStackItems = [
   { name: 'Vercel', category: 'tools' },
   { name: 'Streamlit', category: 'tools' },
 ];
+
+export const architectures = [
+  {
+    title: 'Autonomous RAG Agent Pipeline',
+    type: 'Data Flow',
+    description: 'A scalable retrieval-augmented generation pipeline using vector databases and large language models for enterprise search.',
+    techStack: ['LangChain', 'Pinecone', 'OpenAI', 'FastAPI']
+  },
+  {
+    title: 'Multi-Agent Orchestration',
+    type: 'Agentic',
+    description: 'Coordinated autonomous agents that collaborate to solve complex reasoning tasks, featuring state management and self-reflection.',
+    techStack: ['CrewAI', 'Python', 'LangGraph']
+  },
+  {
+    title: 'Real-Time Inference Engine',
+    type: 'ML Pipeline',
+    description: 'High-throughput model serving architecture for deploying deep learning models with millisecond latency.',
+    techStack: ['TensorFlow Serving', 'Docker', 'Redis']
+  },
+  {
+    title: 'Distributed Training Cluster',
+    type: 'Deep Learning',
+    description: 'Multi-GPU distributed training setup for training large neural networks efficiently across multiple nodes.',
+    techStack: ['PyTorch', 'Horovod', 'Kubernetes']
+  }
+];
+

@@ -7,7 +7,11 @@ export function useReducedMotion(): boolean {
 
   useEffect(() => {
     const mql = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setReducedMotion(mql.matches);
+    
+    // Avoid synchronous setState during first effect tick
+    requestAnimationFrame(() => {
+      setReducedMotion(mql.matches);
+    });
 
     const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
     mql.addEventListener('change', handler);
